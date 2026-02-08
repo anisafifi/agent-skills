@@ -8,7 +8,12 @@ license: Proprietary
 
 Search the web using DuckDuckGo's API. Supports web pages, news articles, images, and videos with customizable filtering and output formats.
 
-⚠️ **Prerequisite:** Install [OpenClawCLI](https://clawhub.ai/) (Windows, MacOS) and run `pip install duckduckgo-search --break-system-packages`
+⚠️ **Prerequisite:** Install [OpenClawCLI](https://clawhub.ai/) (Windows, MacOS) and run `pip install duckduckgo-search`
+
+**Installation Best Practices:**
+- If you encounter permission errors, use a virtual environment instead of system-wide installation
+- For virtual environment: `python -m venv venv && source venv/bin/activate && pip install duckduckgo-search`
+- Never use `--break-system-packages` as it can damage your system's Python installation
 
 ---
 
@@ -379,8 +384,16 @@ cat results.txt
 
 **"Missing required dependency"**
 ```bash
-pip install duckduckgo-search --break-system-packages
+# Standard installation
+pip install duckduckgo-search
+
+# If you get permission errors, use a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install duckduckgo-search
 ```
+
+**Important:** Never use `--break-system-packages` flag as it can corrupt your system's Python installation. Always use virtual environments for isolated package management.
 
 **"OpenClawCLI not found"**
 - Download from https://clawhub.ai/

@@ -18,7 +18,8 @@ try:
     from duckduckgo_search import DDGS
 except ImportError:
     print("Error: duckduckgo-search library not installed", file=sys.stderr)
-    print("Install with: pip install duckduckgo-search --break-system-packages", file=sys.stderr)
+    print("Install with: pip install duckduckgo-search", file=sys.stderr)
+    print("Or use a virtual environment if on a system-managed Python installation", file=sys.stderr)
     sys.exit(1)
 
 
